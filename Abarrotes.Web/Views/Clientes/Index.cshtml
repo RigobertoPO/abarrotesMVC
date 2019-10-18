@@ -1,0 +1,24 @@
+﻿@using Abarrotes.Web.Models;
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Clientes</h2>
+<ul>
+    @foreach (var item in ViewData["misClientes"] as List<Cliente> )
+    {
+    <li>@item.Nombre @item.Edad</li>
+    }
+</ul>
+<table class="table">
+    @foreach (var item in ViewData["misClientes"] as List<Cliente>)
+    {
+    <tr class="success">
+        <td>@item.Id</td>
+        <td>@item.Nombre</td>
+        <td>@item.Direccion</td>
+        <td>@item.Telefono</td>
+        <td>@item.Edad</td>
+    </tr>
+    }
+</table>
